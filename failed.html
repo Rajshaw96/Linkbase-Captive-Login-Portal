@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/assets/favicon.ico">
+    <link rel="apple-touch-icon" href="/assets/favicon.ico">
+    <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicon.ico">   
+    <link rel="apple-touch-icon" sizes="114x114" href="/assets/favicon.ico">
+    <link rel="stylesheet" href="assets/css/failed.css">
+    <title>Connection Failed - WiFi Access</title>
+</head>
+
+<body>
+    <div class="card">
+      
+        
+        <img src="/assets/single-pixel.png" alt="Location Logo" class="logo" />
+        
+        <div class="title" id="location-name"></div>
+        <div class="subtitle">Guest WiFi Access</div>
+
+        <div class="steps">
+            <div class="dot completed"></div>
+            <div class="dot active"></div>
+        </div>
+        
+        <div class="error-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="15" y1="9" x2="9" y2="15"></line>
+                <line x1="9" y1="9" x2="15" y2="15"></line>
+            </svg>
+        </div>
+        
+        <div class="error-title">Connection Failed</div>
+        
+        <div class="message">
+            Login attempt was unsuccessful.<br>
+            Please try again or contact support if the issue persists.
+        </div>
+        
+        <button id="tryAgainBtn" type="button" class="btn">
+            Try Again
+        </button>
+        
+        <!-- <div class="powered">
+            POWERED BY<br />
+            <img src="/assets/linkbase-logo.png" alt="Powered by Linkbase" />
+        </div> -->
+    </div>
+
+    <script src="assets/js/failed.js"></script>
+</body>
+</html>

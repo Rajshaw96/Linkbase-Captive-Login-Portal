@@ -1,0 +1,313 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+    background: linear-gradient(135deg, #8B5CF6 0%, #A855F7 50%, #C084FC 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    position: relative;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.98);
+    border-radius: 32px;
+    padding: 48px 32px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+    position: relative;
+    animation: slideUp 0.6s ease-out;
+}
+
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.logo {
+    width: 120px;
+    max-height: 80px;
+    margin-bottom: 24px;
+    animation: fadeIn 0.8s ease-out 0.2s both;
+    object-fit: contain;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #6B46C1;
+    margin-bottom: 8px;
+    animation: fadeIn 0.8s ease-out 0.4s both;
+}
+
+.subtitle {
+    font-size: 16px;
+    color: #6B7280;
+    margin-bottom: 32px;
+    font-weight: 500;
+    animation: fadeIn 0.8s ease-out 0.6s both;
+}
+
+.steps {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 40px;
+    animation: fadeIn 0.8s ease-out 0.8s both;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background: #E5E7EB;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.dot.active {
+    background: #ef4444;
+    transform: scale(1.2);
+    box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.2);
+}
+
+.dot.completed {
+    background: #10b981;
+    transform: scale(1.1);
+}
+
+.error-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 24px;
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: errorPulse 2s ease-in-out infinite;
+    box-shadow: 0 8px 32px rgba(239, 68, 68, 0.3);
+}
+
+@keyframes errorPulse {
+    0%, 100% { 
+        transform: scale(1);
+        box-shadow: 0 8px 32px rgba(239, 68, 68, 0.3);
+    }
+    50% { 
+        transform: scale(1.05);
+        box-shadow: 0 12px 40px rgba(239, 68, 68, 0.4);
+    }
+}
+
+.error-icon svg {
+    width: 40px;
+    height: 40px;
+    stroke: white;
+    stroke-width: 3;
+    animation: errorShake 0.6s ease-in-out 0.3s both;
+}
+
+@keyframes errorShake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-2px); }
+    20%, 40%, 60%, 80% { transform: translateX(2px); }
+}
+
+.error-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #ef4444;
+    margin-bottom: 8px;
+    animation: fadeIn 0.8s ease-out 1s both;
+}
+
+.message {
+    font-size: 16px;
+    color: #6B7280;
+    line-height: 1.6;
+    margin-bottom: 32px;
+    animation: fadeIn 0.8s ease-out 1.2s both;
+}
+
+.btn {
+    width: 100%;
+    background: linear-gradient(135deg, #8B5CF6, #A855F7);
+    color: white;
+    border: none;
+    padding: 18px;
+    border-radius: 16px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    animation: fadeIn 0.8s ease-out 1.4s both;
+    font-family: inherit;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px rgba(139, 92, 246, 0.4);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+.powered {
+    font-size: 12px;
+    color: #9CA3AF;
+    margin-top: 32px;
+    text-align: center;
+    font-weight: 500;
+    animation: fadeIn 0.8s ease-out 1.6s both;
+}
+
+.powered img {
+    width: 120px;
+    margin-top: 8px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.powered img:hover {
+    opacity: 1;
+}
+
+.error-indicator {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    font-size: 32px;
+    animation: errorBounce 2s ease-in-out infinite;
+}
+
+@keyframes errorBounce {
+    0%, 100% { transform: rotate(0deg) scale(1); }
+    25% { transform: rotate(-10deg) scale(1.1); }
+    75% { transform: rotate(10deg) scale(1.1); }
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    
+    .card {
+        padding: 32px 24px;
+        max-width: 100%;
+        border-radius: 24px;
+    }
+    
+    .logo {
+        width: 100px;
+        max-height: 65px;
+        margin-bottom: 20px;
+    }
+    
+    .title {
+        font-size: 24px;
+        margin-bottom: 6px;
+    }
+    
+    .subtitle {
+        font-size: 14px;
+        margin-bottom: 24px;
+    }
+    
+    .steps {
+        margin-bottom: 32px;
+        gap: 12px;
+    }
+    
+    .dot {
+        width: 10px;
+        height: 10px;
+    }
+    
+    .error-icon {
+        width: 70px;
+        height: 70px;
+        margin-bottom: 20px;
+    }
+    
+    .error-icon svg {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .error-title {
+        font-size: 20px;
+    }
+    
+    .message {
+        font-size: 14px;
+        margin-bottom: 24px;
+    }
+    
+    .btn {
+        padding: 16px;
+        font-size: 16px;
+    }
+    
+    .powered {
+        margin-top: 24px;
+        font-size: 11px;
+    }
+    
+    .powered img {
+        width: 100px;
+    }
+    
+    .error-indicator {
+        font-size: 24px;
+        top: -5px;
+        right: -5px;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 360px) {
+    .card {
+        padding: 24px 16px;
+    }
+    
+    .logo {
+        width: 80px;
+        max-height: 50px;
+        margin-bottom: 16px;
+    }
+    
+    .title {
+        font-size: 20px;
+    }
+    
+    .subtitle {
+        font-size: 13px;
+    }
+    
+    .btn {
+        padding: 14px;
+        font-size: 15px;
+    }
+    
+    .powered img {
+        width: 80px;
+    }
+} 
