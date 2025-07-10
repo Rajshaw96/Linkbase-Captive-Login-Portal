@@ -1,6 +1,6 @@
 # Linkbase Captive Portal Login - Linkbase Integration
 
-A modern, responsive captive portal login application built for Linkbase Platform specifically designed for Linkbase requirements. Features simple form-based authentication without OTP verification.
+A modern, responsive captive portal login application built for HaloWiFi Platform specifically designed for Linkbase requirements. Features simple form-based authentication without OTP verification.
 
 ## Features
 
@@ -10,7 +10,7 @@ A modern, responsive captive portal login application built for Linkbase Platfor
 - **Instant Access**: Users gain network access immediately upon form submission
 - **Legal Compliance**: Terms of Service and Privacy Policy modals
 - **Error Handling**: Comprehensive error states and user feedback
-- **API Integration**: Seamless integration with Linkbase backend
+- **API Integration**: Seamless integration with HaloWiFi backend
 - **Linkbase Customized**: Built specifically for Linkbase network requirements
 
 ## Technology Stack
@@ -46,7 +46,7 @@ src/
 Edit `src/assets/js/config.js` to customize:
 
 ```javascript
-const YOUR_APP_API_DOMAIN = "https://one.Linkbase.com";
+const YOUR_APP_API_DOMAIN = "https://one.halowifi.com";
 const LOGIN_API_ENDPOINT = "/api/external-network-logins/email-login-trigger";
 const USER_BANDWIDTH_LIMIT = 10; // Mbps
 const USER_SESSION_TIMEOUT = 10; // Minutes
@@ -56,7 +56,7 @@ const USER_SESSION_TIMEOUT = 10; // Minutes
 
 The application expects these URL parameters for proper operation:
 
-- `location_id`: Linkbase location identifier
+- `location_id`: HaloWiFi location identifier
 - `network_id`: Network identifier
 - `session_id`: User session identifier
 - `login_app_id`: Login application identifier
@@ -74,7 +74,7 @@ The application expects these URL parameters for proper operation:
 1. Configure API endpoints in `config.js`
 2. Update branding assets and logos for Linkbase
 3. Deploy to web server with HTTPS support
-4. Integrate with Linkbase captive portal infrastructure
+4. Integrate with HaloWiFi captive portal infrastructure
 5. Configure for Linkbase network requirements
 
 ## Authentication Flow
@@ -94,7 +94,7 @@ This application is specifically configured for Linkbase network requirements:
 
 ## API Integration
 
-The application integrates with Linkbase's authentication API:
+The application integrates with HaloWiFi's authentication API:
 
 - **Endpoint**: `/api/external-network-logins/email-login-trigger`
 - **Method**: POST
