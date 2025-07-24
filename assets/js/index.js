@@ -112,6 +112,7 @@ function handleLogin() {
   const countryCodeValue = document.getElementById('countryCode')?.value;
   const phone = document.getElementById('phone')?.value;
   const termsAccepted = document.getElementById('terms')?.checked;
+  const marketingOptIn = document.getElementById('host_contact_agree')?.checked;
 
   // Validate required fields
   if (!fullName || !email || !phone) {
